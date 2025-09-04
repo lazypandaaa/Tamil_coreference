@@ -17,7 +17,9 @@ import networkx as nx
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
-from google import genai
+import google.generativeai as genai   
+
+#from google import genai
 import warnings
 warnings.filterwarnings('ignore')
 
