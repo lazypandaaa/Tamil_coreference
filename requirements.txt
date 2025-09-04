@@ -1,0 +1,8 @@
+streamlit
+plotly
+pandas
+networkx
+pydantic
+google-generativeai
+numpy
+matplotlib
