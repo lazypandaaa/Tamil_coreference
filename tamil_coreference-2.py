@@ -1061,14 +1061,4 @@ if final_result and final_result.clusters:
 # 
 # if __name__ == "__main__":
 #     main()
-"""
-from pyngrok import ngrok
 
-ngrok_key = "2vOa3qpFVL6rc9bgTeWIrI3EG0i_4YHxrqQsdfmka7ryesrY9"
-port = 8501
-
-ngrok.set_auth_token(ngrok_key)
-ngrok.connect(port).public_url
-
-!rm -rf logs.txt && streamlit run app.py &>/content/logs.txt
-"""
