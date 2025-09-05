@@ -16,22 +16,19 @@ from google import genai
 
 
 
-# Hide GitHub button, footer, and optionally main menu
-hide_github_icon = """
+hide_streamlit_github = """
     <style>
-    /* Hide Streamlit GitHub icon (top-right) */
-    .stApp a[data-testid="stAppGithubLink"] {
+    /* Hide only the top-right GitHub button */
+    header [data-testid="stToolbar"] a[href*="github.com"] {
         display: none !important;
     }
 
-    /* Hide Streamlit footer */
-    footer {visibility: hidden;}
-
-    /* Hide Streamlit hamburger menu (optional) */
-    #MainMenu {visibility: hidden;}
+    /* Optional: also hide footer + menu */
+    footer {visibility: hidden !important;}
+    #MainMenu {visibility: hidden !important;}
     </style>
 """
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+st.markdown(hide_streamlit_github, unsafe_allow_html=True)
 
 
 
