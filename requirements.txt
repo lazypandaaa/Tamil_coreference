@@ -3,6 +3,7 @@ plotly
 pandas
 networkx
 pydantic
-google-generativeai
+google-genai==1.33.0
 numpy
 matplotlib
+
