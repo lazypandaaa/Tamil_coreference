@@ -1059,6 +1059,6 @@ if final_result and final_result.clusters:
 #             mime="application/json"
 #         )
 # 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+   main()
 
