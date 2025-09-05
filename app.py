@@ -12,6 +12,27 @@ from pydantic import BaseModel
 import numpy as np
 from google import genai
 
+
+
+
+# Hide GitHub button, footer, and optionally main menu
+hide_github_icon = """
+    <style>
+    /* Hide Streamlit GitHub icon (top-right) */
+    .stApp a[data-testid="stAppGithubLink"] {
+        display: none !important;
+    }
+
+    /* Hide Streamlit footer */
+    footer {visibility: hidden;}
+
+    /* Hide Streamlit hamburger menu (optional) */
+    #MainMenu {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
+
 # Configure Streamlit page
 st.set_page_config(
     page_title="Tamil Coreference Resolution",
