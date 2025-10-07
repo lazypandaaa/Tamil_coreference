@@ -130,7 +130,8 @@ class GeminiCoreferenceResolver:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-1.5-flash",
+                model = genai.GenerativeModel("models/gemini-1.5-flash-latest"),
+                #model="gemini-1.5-flash",
                 contents=prompt,
                 config={
                     "response_mime_type": "application/json",
