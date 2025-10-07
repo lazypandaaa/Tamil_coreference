@@ -23,7 +23,9 @@ warnings.filterwarnings('ignore')
 
 # Set up your API key
 # Replace 'YOUR_API_KEY' with your actual Gemini API key
+
 GEMINI_API_KEY = "AIzaSyD4dxXY78p58XjOaloTW0r6bLq92eQOOkc"  # Get this from Google AI Studio
+GEMINI_API_KEY = "AIzaSyARKBMZglTBtSNQTbPIac6IErs_63yaREQ"
 os.environ['GEMINI_API_KEY'] = GEMINI_API_KEY
 
 # For Colab, you can use the secrets feature or set it directly
@@ -130,8 +132,8 @@ class GeminiCoreferenceResolver:
 
         try:
             response = self.client.models.generate_content(
-                model = genai.GenerativeModel("models/gemini-1.5-flash-latest"),
-                #model="gemini-1.5-flash",
+                #model = genai.GenerativeModel("models/gemini-1.5-flash-latest"),
+                model="gemini-1.5-flash",
                 contents=prompt,
                 config={
                     "response_mime_type": "application/json",
