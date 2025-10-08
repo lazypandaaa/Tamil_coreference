@@ -143,13 +143,14 @@ class GeminiCoreferenceResolver:
 
         try:
             response = self.client.models.generate_content(
-                model="gemini-1.5-flash",
-                contents=prompt,
-                config={
-                    "response_mime_type": "application/json",
-                    "response_schema": CoreferenceResult,
-                }
+            model="models/gemini-2.5-flash",
+            contents=prompt,
+            config={
+                "response_mime_type": "application/json",
+                "response_schema": CoreferenceResult,
+            }
             )
+              
 
             result = json.loads(response.text)
             return CoreferenceResult(**result)
